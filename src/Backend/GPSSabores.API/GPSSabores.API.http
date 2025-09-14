@@ -1,0 +1,6 @@
+@GPSSabores.API_HostAddress = http://localhost:5110
+
+GET {{GPSSabores.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

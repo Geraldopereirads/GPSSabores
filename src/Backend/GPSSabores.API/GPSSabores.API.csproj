@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\GPSSabores.Communication\GPSSabores.Communication.csproj" />
+    <ProjectReference Include="..\..\Shared\GPSSabores.Exceptions\GPSSabores.Exceptions.csproj" />
+    <ProjectReference Include="..\GPSSabores.Application\GPSSabores.Application.csproj" />
+  </ItemGroup>
+
+</Project>
