@@ -24,3 +24,15 @@ O GPSSabores tem como objetivo colocar em prática conceitos de desenvolvimento 
 - [.NET 8 SDK](https://dotnet.microsoft.com/pt-br/download)
 - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) (ou outro banco compatível)
 - [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [VS Code](https://code.visualstudio.com/)
+
+
+- cd GPSSabores
+
+- dotnet run
+
+- http://localhost:5000
+
+(Em breve)
+Serão adicionados testes unitários e de integração utilizando o xUnit.
+
+
