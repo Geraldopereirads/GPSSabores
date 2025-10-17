@@ -14,6 +14,7 @@
     <ProjectReference Include="..\..\Shared\GPSSabores.Communication\GPSSabores.Communication.csproj" />
     <ProjectReference Include="..\..\Shared\GPSSabores.Exceptions\GPSSabores.Exceptions.csproj" />
     <ProjectReference Include="..\GPSSabores.Application\GPSSabores.Application.csproj" />
+    <ProjectReference Include="..\GPSSabores.Infrastructure\GPSSabores.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
