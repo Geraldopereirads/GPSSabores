@@ -2,6 +2,8 @@ using GPSSabores.API.Infrastructure;
 using GPSSabores.API.Middleware;
 using GPSSabores.Application;
 using GPSSabores.Infrastructure;
+using GPSSabores.Infrastructure.Extensions;
+using GPSSabores.Infrastructure.Migrations;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,4 +41,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+MigrateDatabase();
+
 app.Run();
+
+void MigrateDatabase()
+{
+    var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+    var connectionString = builder.Configuration.ConnectionString();
+    DatabaseMigration.Migrate(connectionString, serviceScope.ServiceProvider);
+}

@@ -1,12 +1,16 @@
 ﻿using Dapper;
+using FluentMigrator.Runner;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GPSSabores.Infrastructure.Migrations;
+
 public static class DatabaseMigration
 {
-    public static void migrate(string connectionString)
+    public static void Migrate(string connectionString, IServiceProvider serviceProvider)
     {
-
+        EnsureDatabasecreated_SQLServer(connectionString);
+        MigrationDatabase(serviceProvider);
     }
 
     private static void EnsureDatabasecreated_SQLServer(string connectionString)
@@ -22,8 +26,16 @@ public static class DatabaseMigration
         var parameters = new DynamicParameters();
         parameters.Add("name", databaseName);
 
-        var records = dbConnection.Query("SELECT * FROM sys.DATABASES WHERE name = @name", parameters);
+        var records = dbConnection.Query("SELECT * FROM sys.databases WHERE name = @name", parameters);
         if (records.Any() == false)
             dbConnection.Execute($"CREATE DATABASE {databaseName}");
+    }
+
+    private static void MigrationDatabase(IServiceProvider serviceProvider)
+    {
+        var runner = serviceProvider.GetRequiredService<IMigrationRunner>();
+
+        runner.ListMigrations();
+        runner.MigrateUp();
     }
 }
