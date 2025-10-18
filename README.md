@@ -1,20 +1,33 @@
 # 🍽️ GPSSabores API
 
-API RESTful desenvolvida em **C# e .NET 8** com o objetivo de gerenciar produtos, pedidos e usuários de uma loja de alimentos.
+API RESTful desenvolvida em **C# e .NET **, com o objetivo de gerenciar produtos, pedidos e usuários de uma loja de alimentos.
 
-> 🚧 **Status do Projeto:** Em desenvolvimento.  
-> Atualmente estou implementando autenticação com JWT e integração com banco de dados utilizando Entity Framework Core.  
-> Este projeto faz parte do meu aprendizado prático em **C# e .NET**, e novas funcionalidades serão adicionadas conforme o desenvolvimento avança.
+>  **Status do Projeto:** Em desenvolvimento.  
+> Atualmente estou implementando autenticação com **JWT** e integração com banco de dados utilizando **Entity Framework Core**.  
+> Este projeto faz parte do meu aprendizado prático em **C# e .NET**, aplicando conceitos de arquitetura **DDD (Domain-Driven Design)** para manter o código escalável, organizado e de fácil manutenção.  
+> Novas funcionalidades serão adicionadas conforme o desenvolvimento avança.
 
 ---
 
 ## 🧠 Objetivo do Projeto
-O GPSSabores tem como objetivo colocar em prática conceitos de desenvolvimento backend com **.NET**, como:
-- Criação de APIs RESTful;
-- Padrão de camadas (Controllers, Services, Repositories);
+
+O **GPSSabores** tem como objetivo colocar em prática conceitos de desenvolvimento backend com **.NET**, como:
+
+- Criação de APIs **RESTful**;
+- Arquitetura baseada em **DDD (Domain-Driven Design)**;
+- Separação em camadas: **Controllers**, **Services**, **Repositories**, **Domain** e **Infrastructure**;
 - Conexão com banco de dados relacional via **Entity Framework Core**;
 - Autenticação e autorização com **JWT**;
-- Documentação com **Swagger**.
+- Documentação automática com **Swagger**.
+
+---
+
+## 💡 Funcionalidades Futuras
+
+- Integração com o **ChatGPT**, permitindo respostas inteligentes e automatizadas;
+- Login via **Google**;
+- Testes unitários e de integração com **xUnit**;
+- Deploy automatizado em ambiente cloud.
 
 ---
 
@@ -25,14 +38,13 @@ O GPSSabores tem como objetivo colocar em prática conceitos de desenvolvimento 
 - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) (ou outro banco compatível)
 - [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [VS Code](https://code.visualstudio.com/)
 
+### 2️⃣ Executando o projeto
+```bash
+# Clone o repositório
+git clone https://github.com/Geraldopereirads/GPSSabores.git
 
-- cd GPSSabores
+# Acesse a pasta do projeto
+cd GPSSabores
 
-- dotnet run
-
-- http://localhost:5000
-
-(Em breve)
-Serão adicionados testes unitários e de integração utilizando o xUnit.
-
-
+# Execute a aplicação
+dotnet watch --project src/Backend/GPSSabores.API/GPSSabores.API.csproj run --launch-profile "https"
