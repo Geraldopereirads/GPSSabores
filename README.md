@@ -3,7 +3,7 @@
 API RESTful desenvolvida em **C# e .NET**, com o objetivo de gerenciar produtos, pedidos e usuários de uma loja de alimentos.
 
 > **Status do Projeto:** Em desenvolvimento  
-> Atualmente estou iniciando a implementação dos **testes de unidade com xUnit** para o **registro de usuários**.  
+> Atualmente estou implementando **testes de unidade com xUnit** para o **registro de usuários**, utilizando o **Bogus** — uma biblioteca **open-source** que gera dados aleatórios (como **nome, e-mail e senha**) para tornar os testes mais próximos de um cenário real.  
 > Este projeto faz parte do meu aprendizado prático em **C# e .NET**, aplicando conceitos de arquitetura **DDD (Domain-Driven Design)** para manter o código **escalável, organizado e de fácil manutenção**.  
 > Novas funcionalidades serão adicionadas conforme o desenvolvimento avança.
 
@@ -23,39 +23,45 @@ O **GPSSabores** tem como objetivo colocar em prática conceitos avançados de d
   - **Infrastructure**
 - Conexão com banco de dados relacional via **Entity Framework Core**;
 - Gerenciamento de migrations e versionamento do banco de dados utilizando **FluentMigrator**, permitindo:
-  -  Redução da quantidade de pastas e arquivos de migrations versionados no GitHub;
-  -  Evitar scripts manuais para criação/atualização do banco;
-  -  Organização do versionamento em uma pasta dedicada `Versions`, facilitando o controle de versões;
+  - Redução da quantidade de pastas e arquivos de migrations versionados no GitHub;
+  - Evitar scripts manuais para criação/atualização do banco;
+  - Organização do versionamento em uma pasta dedicada `Versions`, facilitando o controle de versões;
 - Autenticação e autorização com **JWT**;
-- Documentação automática com **Swagger**.
+- Documentação automática com **Swagger**;
+- Criação de **testes unitários realistas** com **xUnit** e **Bogus** para simular dados dinâmicos.
 
 ---
 
 ## Progresso do Projeto
 
-### Concluído
+### **Concluído**
 
-- [x] Estrutura base do projeto em camadas (**DDD**)
-- [x] Configuração do **Entity Framework Core**
-- [x] Implementação do **FluentMigrator** para versionamento do banco
-- [x] Criação da **migration inicial** para tabela de usuários
-- [x] Configuração do **Swagger**
-- [x] Configuração e injeção de dependência (IoC)
-- [x] Integração com o **SQL Server**
-- [x] Refatoração do código e melhorias de arquitetura
+- [x] Estrutura base do projeto em camadas (**DDD**)  
+- [x] Configuração do **Entity Framework Core**  
+- [x] Implementação do **FluentMigrator** para versionamento do banco  
+- [x] Criação da **migration inicial** para tabela de usuários  
+- [x] Configuração do **Swagger**  
+- [x] Configuração e injeção de dependência (**IoC**)  
+- [x] Integração com o **SQL Server**  
+- [x] Refatoração do código e melhorias de arquitetura  
 
-### Em Andamento
+### **Em Andamento**
 
-- [ ] Implementação de **testes unitários** com **xUnit** (iniciando pelo registro de usuário)
-- [ ] Adição de **tratamento global de exceções**
-- [ ] Criação de **testes de integração**
+- [ ] Implementação de **testes unitários** com **xUnit**  
+  - [x] Instalação e configuração do **xUnit**  
+  - [x] Instalação e uso do **Bogus** para geração de dados dinâmicos  
+  - [ ] Criação dos **cenários de teste para registro de usuário**  
+  - [ ] Ampliação dos testes para **outros módulos (produtos, pedidos, etc.)**  
+- [ ] Adição de **tratamento global de exceções**  
+- [ ] Criação de **testes de integração**  
 - [ ] Ajustes de **logs e monitoramento**
 
-### Próximas Etapas
-- [ ] Integração do **JWT** para autenticação
+### **Próximas Etapas**
+
+- [ ] Integração do **JWT** para autenticação  
 - [ ] Integração com o **ChatGPT** para respostas inteligentes e automatizadas  
 - [ ] Login via **Google**  
-- [ ] Pipeline de **deploy automatizado** em ambiente cloud  
+- [ ] Pipeline de **deploy automatizado** em ambiente **cloud**
 
 ---
 
@@ -68,25 +74,5 @@ O **GPSSabores** tem como objetivo colocar em prática conceitos avançados de d
 - **SQL Server**
 - **JWT**
 - **Swagger**
-- **xUnit** *(para testes unitários)*
-
----
-
-## ⚙️ Como Executar o Projeto
-
-### 1️ Pré-requisitos
-- [.NET 8 SDK](https://dotnet.microsoft.com/pt-br/download)
-- [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
-- [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [VS Code](https://code.visualstudio.com/)
-
-### 2️ Executando o Projeto
-
-```bash
-# Clone o repositório
-git clone https://github.com/Geraldopereirads/GPSSabores.git
-
-# Acesse a pasta do projeto
-cd GPSSabores
-
-# Execute a aplicação
-dotnet watch --project src/Backend/GPSSabores.API/GPSSabores.API.csproj run --launch-profile "https"
+- **xUnit**
+- **Bogus** *(para geração dinâmica de dados nos testes)*
