@@ -123,11 +123,17 @@
   <data name="EMAIL_EMPTY" xml:space="preserve">
     <value>The e-mail cannot be empty!</value>
   </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>Invalid Email!</value>
+  </data>
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>The name cannot be empty!</value>
   </data>
   <data name="PASSWORD_EMPTY" xml:space="preserve">
     <value>The password cannot be empty!</value>
+  </data>
+  <data name="PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>Password must be at least 6 characters long.</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Unknown error</value>

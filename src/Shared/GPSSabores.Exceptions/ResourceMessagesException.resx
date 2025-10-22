@@ -123,11 +123,17 @@
   <data name="EMAIL_EMPTY" xml:space="preserve">
     <value>O e-mail não pode estar vazio!</value>
   </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>E-mail inválido!</value>
+  </data>
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>O nome não pode estar vazio!</value>
   </data>
   <data name="PASSWORD_EMPTY" xml:space="preserve">
     <value>A senha não pode estar vazio!</value>
+  </data>
+  <data name="PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>A senha deve ter pelo menos 6 caracteres.</value>
   </data>
   <data name="UNKNOWN_ERROR" xml:space="preserve">
     <value>Error desconhecido</value>
