@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D9CA1909-593C-46A0-867B-80E6A9751FD4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{585AF858-BF8F-4848-826F-35D74E2CCD50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4DF98381-6759-4E7E-8B53-777580FE26AE}"
@@ -22,6 +20,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSSabores.Communication", "src\Shared\GPSSabores.Communication\GPSSabores.Communication.csproj", "{63CA473C-8000-4988-AF39-9D1B17F7FCA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSSabores.Exceptions", "src\Shared\GPSSabores.Exceptions\GPSSabores.Exceptions.csproj", "{E925BF26-BD0B-4935-8C83-462088AF8A42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{777A314D-69E8-4A95-AAC4-51A1F94D13E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validators.test", "tests\Validators.test\Validators.test.csproj", "{A4851CD1-D539-41D3-BAEE-CF93460AAB8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTestUtilities", "tests\CommonTestUtilities\CommonTestUtilities.csproj", "{E5E84719-A562-4F77-94BF-716C174ADB32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{E925BF26-BD0B-4935-8C83-462088AF8A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E925BF26-BD0B-4935-8C83-462088AF8A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E925BF26-BD0B-4935-8C83-462088AF8A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4851CD1-D539-41D3-BAEE-CF93460AAB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4851CD1-D539-41D3-BAEE-CF93460AAB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4851CD1-D539-41D3-BAEE-CF93460AAB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4851CD1-D539-41D3-BAEE-CF93460AAB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E84719-A562-4F77-94BF-716C174ADB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E84719-A562-4F77-94BF-716C174ADB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E84719-A562-4F77-94BF-716C174ADB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E84719-A562-4F77-94BF-716C174ADB32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +78,8 @@ Global
 		{AE151405-B19E-450F-BA03-B298A9A74469} = {585AF858-BF8F-4848-826F-35D74E2CCD50}
 		{63CA473C-8000-4988-AF39-9D1B17F7FCA1} = {4DF98381-6759-4E7E-8B53-777580FE26AE}
 		{E925BF26-BD0B-4935-8C83-462088AF8A42} = {4DF98381-6759-4E7E-8B53-777580FE26AE}
+		{A4851CD1-D539-41D3-BAEE-CF93460AAB8F} = {777A314D-69E8-4A95-AAC4-51A1F94D13E8}
+		{E5E84719-A562-4F77-94BF-716C174ADB32} = {777A314D-69E8-4A95-AAC4-51A1F94D13E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCF44E05-B697-474D-AF10-79AF7B82A745}
