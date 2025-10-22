@@ -2,6 +2,7 @@
 using GPSSabores.Communication.Requests;
 using GPSSabores.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace GPSSabores.API.Controllers
 {
@@ -12,12 +13,12 @@ namespace GPSSabores.API.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(ResponseRegisterdUserJson), StatusCodes.Status201Created)]
-        public IActionResult Register(
+        public async Task<IActionResult> Register(
             [FromServices] IRegisterUserCase useCase,
            [FromBody] RequestRegisterUserJson request)
         {
 
-            var result = useCase.Execute(request);
+            var result = await useCase.Execute(request);
             return Created(string.Empty, result);
         }
     }
