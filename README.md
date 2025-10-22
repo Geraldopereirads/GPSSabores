@@ -3,7 +3,7 @@
 API RESTful desenvolvida em **C# e .NET**, com o objetivo de gerenciar produtos, pedidos e usuários de uma loja de alimentos.
 
 > **Status do Projeto:** Em desenvolvimento  
-> Atualmente estou implementando **testes de unidade com xUnit** para o **registro de usuários**, utilizando o **Bogus** — uma biblioteca **open-source** que gera dados aleatórios (como **nome, e-mail e senha**) para tornar os testes mais próximos de um cenário real.  
+> Atualmente estou implementando **testes de unidade com xUnit** para o **useCase** **Regra de Negócio**, utilizando o **Bogus** — uma biblioteca **open-source** que gera dados aleatórios (como **nome, e-mail e senha**) para tornar os testes mais próximos de um cenário real.  
 > Este projeto faz parte do meu aprendizado prático em **C# e .NET**, aplicando conceitos de arquitetura **DDD (Domain-Driven Design)** para manter o código **escalável, organizado e de fácil manutenção**.  
 > Novas funcionalidades serão adicionadas conforme o desenvolvimento avança.
 
@@ -44,13 +44,15 @@ O **GPSSabores** tem como objetivo colocar em prática conceitos avançados de d
 - [x] Configuração e injeção de dependência (**IoC**)  
 - [x] Integração com o **SQL Server**  
 - [x] Refatoração do código e melhorias de arquitetura  
+- [x] Implementação dos **testes unitários para registro de usuário** com **xUnit** e **Bogus**
 
 ### **Em Andamento**
 
 - [ ] Implementação de **testes unitários** com **xUnit**  
   - [x] Instalação e configuração do **xUnit**  
   - [x] Instalação e uso do **Bogus** para geração de dados dinâmicos  
-  - [ ] Criação dos **cenários de teste para registro de usuário**  
+  - [x] Criação dos **cenários de teste para registro de usuário**  
+  - [ ] Criação dos **testes dos useCases / regras de negócio**  
   - [ ] Ampliação dos testes para **outros módulos (produtos, pedidos, etc.)**  
 - [ ] Adição de **tratamento global de exceções**  
 - [ ] Criação de **testes de integração**  
