@@ -18,11 +18,10 @@ public static class DependencyInjection
 
     private static void AddAutoMapper(IServiceCollection services)
     {
-        var autoMapper = new AutoMapper.MapperConfiguration(options =>
+        services.AddScoped(option => new AutoMapper.MapperConfiguration(options =>
         {
             options.AddProfile(new AutoMapping());
-        }).CreateMapper();
-        services.AddScoped(option => autoMapper);
+        }).CreateMapper());
     }
 
     private static void AddUseCases(IServiceCollection services)
